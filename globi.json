@@ -8,15 +8,21 @@
       "@language" : "en"
     } ],
     "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
-    "url" : "https://drive.google.com/file/d/12TJm5vcM3m9-gVmQpu1EVOmMYtMsj0Vb/view?usp=sharing",
+    "url" : "https://docs.google.com/spreadsheets/d/1E6HLAUoH_ByT8KG3tSLfpc4Tmb7vbidSTNxsKG-syrk/export?format=csv&gid=1031433960#gid=1031433960",
     "dcterms:bibliographicCitation" : "Authors: Beckett Sterner, Nathan Upham, Jordan Sowards. \"Rodent-Virus Metadata Extraction.\"",
     "delimiter" : ",",
-    "headerRowCount" : 1,
-    "interactionTypeName" : "Host-Pathogen Interactions",
-    "null" : [ "" ],
+    "headerRowCount" : 2,
+    "interactionTypeId": "http://purl.obolibrary.org/obo/RO_0002437",
+    "interactionTypeName": "interactsWith",
+    "null" : [ "", "NA" ],
     "tableSchema" : {
+      "primaryKey": "referenceId",
       "columns" : [ {
-         "name" : "sourceTaxonName",
+        "name" : "referenceId",
+        "titles" : "Paper ID",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonName",
         "titles" : "Host Name",
         "datatype" : "string"
       }, {
@@ -24,47 +30,71 @@
         "titles" : "Virus Name",
         "datatype" : "string"
       }, {
-        "name" : "observationDateTime",
+        "name" : "http://rs.tdwg.org/dwc/terms/eventDate",
         "titles" : "Sampling Time",
         "datatype" : "string"
       }, {
-        "name" : "dwc:measurementMethod",
+        "name" : "basisOfRecord",
+        "titles" : "Study Type",
+        "datatype" : "string"
+      }, {
+        "name" : "Result Type",
+        "titles" : "Result Type",
+        "datatype" : "string"
+      }, {
+        "name" : "Measurement Method",
         "titles" : "Measurement Method",
         "datatype" : "string"
       }, {
-        "name" : "dwc:Locality",
+        "name" : "Result",
+        "titles" : "Result",
+        "datatype" : "string"
+      }, {
+        "name" : "Confidence Interval",
+        "titles" : "Confidence Interval",
+        "datatype" : "string"
+      }, {
+        "name" : "Format",
+        "titles" : "Format",
+        "datatype" : "string"
+      }, {
+        "name" : "Misc Method Conditions",
+        "titles" : "Misc Method Conditions",
+        "datatype" : "string"
+      }, {
+        "name" : "Use for Prevalence",
+        "titles" : "Use for Prevalence",
+        "datatype" : "string"
+      }, {
+        "name" : "localityName",
         "titles" : "Locality",
         "datatype" : "string"
       }, {
-        "name" : "dwc:municipality",
+        "name" : "Municipality",
         "titles" : "Municipality",
         "datatype" : "string"
       }, {
-        "name" : "dwc:county",
+        "name" : "County",
         "titles" : "County",
         "datatype" : "string"
       }, {
-        "name" : "dwc:stateProvince",
+        "name" : "StateProvince",
         "titles" : "StateProvince",
         "datatype" : "string"
       }, {
-        "name" : "dwc:stateProvince",
-        "titles" : "State/Province",
-        "datatype" : "string"
-      }, {
-        "name" : "dwc:Country",
+        "name" : "Country",
         "titles" : "Country",
         "datatype" : "string"
       }, {
-         "name" : "verbatimLocality",
-        "titles" : "VerbatimLocality",
+        "name" : "Verbatim Locality",
+        "titles" : "Verbatim Locality",
         "datatype" : "string"
       }, {
-        "name" : "dwc:locationID",
+        "name" : "Field Site ID",
         "titles" : "Field Site ID",
         "datatype" : "string"
       }, {
-        "name" : "sourcePhysiologicalStateName",
+        "name" : "sourceSexName",
         "titles" : "Host Sex",
         "datatype" : "string"
       }, {
@@ -73,9 +103,13 @@
         "datatype" : "string"
       }, {
         "name" : "sourceBodyPartName",
-        "titles" : "Host Material Type", 
+        "titles" : "Host Material Type",
         "datatype" : "string"
       }, {
+        "name" : "Misc Host Attributes",
+        "titles" : "Misc Host Attributes",
+        "datatype" : "string"
+      } ] 
     }
   } ]
 }
