@@ -8,17 +8,30 @@
       "@language" : "en"
     } ],
     "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
-    "url" : "https://docs.google.com/spreadsheets/d/1E6HLAUoH_ByT8KG3tSLfpc4Tmb7vbidSTNxsKG-syrk/export?format=csv&gid=1031433960#gid=1031433960",
+    "_url" : "https://docs.google.com/spreadsheets/d/1E6HLAUoH_ByT8KG3tSLfpc4Tmb7vbidSTNxsKG-syrk/export?format=csv&gid=1031433960#gid=1031433960",
+    "_comment" : "host-virus.csv contains a copy of a no longer accessible google sheet (as of 2026-08-21)",
+    "url" : "host-virus.csv",
     "dcterms:bibliographicCitation" : "Authors: Beckett Sterner, Nathan Upham, Jordan Sowards. \"Rodent-Virus Metadata Extraction.\"",
     "delimiter" : ",",
     "headerRowCount" : 2,
-    "interactionTypeId": "http://purl.obolibrary.org/obo/RO_0002437",
-    "interactionTypeName": "interactsWith",
+    "interactionTypeId": "http://purl.obolibrary.org/obo/RO_0002453",
+    "interactionTypeName": "hostOf",
     "null" : [ "", "NA" ],
     "tableSchema" : {
-      "primaryKey": "referenceId",
-      "columns" : [ {
-        "name" : "referenceId",
+    "columns" : [ {
+        "name" : "referenceDoi",
+        "titles" : "Reference DOI",
+        "datatype" : "string"
+      }, {
+        "name" : "referenceUrl",
+        "titles" : "Reference URL",
+        "datatype" : "string"
+      }, {
+        "name" : "referenceCitation",
+        "titles" : "Reference Citation",
+        "datatype" : "string"
+      }, {
+        "name" : "Paper ID",
         "titles" : "Paper ID",
         "datatype" : "string"
       }, {
@@ -26,12 +39,28 @@
         "titles" : "Host Name",
         "datatype" : "string"
       }, {
+        "name" : "sourceTaxonId",
+        "titles" : "Host TaxonID",
+        "datatype" : "string"
+      }, {
         "name" : "targetTaxonName",
         "titles" : "Virus Name",
         "datatype" : "string"
       }, {
+        "name" : "targetTaxonId",
+        "titles" : "Virus TaxonID",
+        "datatype" : "string"
+      }, {
         "name" : "http://rs.tdwg.org/dwc/terms/eventDate",
         "titles" : "Sampling Time",
+        "datatype" : "string"
+      }, {
+        "name" : "",
+        "titles" : "",
+        "datatype" : "string"
+      }, {
+        "name" : "Interaction Type ID",
+        "titles" : "Interaction Type ID",
         "datatype" : "string"
       }, {
         "name" : "basisOfRecord",
@@ -42,8 +71,12 @@
         "titles" : "Result Type",
         "datatype" : "string"
       }, {
-        "name" : "Measurement Method",
-        "titles" : "Measurement Method",
+        "name" : "Measurement Method Name",
+        "titles" : "Measurement Method Name",
+        "datatype" : "string"
+      }, {
+        "name" : "Measurement Method ID",
+        "titles" : "Measurement Method ID",
         "datatype" : "string"
       }, {
         "name" : "Result",
@@ -58,6 +91,14 @@
         "titles" : "Format",
         "datatype" : "string"
       }, {
+        "name" : "Statistical Method Name",
+        "titles" : "Statistical Method Name",
+        "datatype" : "string"
+      }, {
+        "name" : "Statistical Method ID",
+        "titles" : "Statistical Method ID",
+        "datatype" : "string"
+      }, {
         "name" : "Misc Method Conditions",
         "titles" : "Misc Method Conditions",
         "datatype" : "string"
@@ -68,6 +109,10 @@
       }, {
         "name" : "localityName",
         "titles" : "Locality",
+        "datatype" : "string"
+      }, {
+        "name" : "LocalityID",
+        "titles" : "LocalityID",
         "datatype" : "string"
       }, {
         "name" : "Municipality",
@@ -94,22 +139,46 @@
         "titles" : "Field Site ID",
         "datatype" : "string"
       }, {
+        "name" : "habitatName",
+        "titles" : "Habitat Name",
+        "datatype" : "string"
+      }, {
+        "name" : "Habitat ID",
+        "titles" : "Habitat ID",
+        "datatype" : "string"
+      }, {
         "name" : "sourceSexName",
         "titles" : "Host Sex",
         "datatype" : "string"
       }, {
         "name" : "sourceLifeStageName",
-        "titles" : "Host Lifestage",
+        "titles" : "Host Lifestage Name",
         "datatype" : "string"
       }, {
-        "name" : "sourceBodyPartName",
-        "titles" : "Host Material Type",
+        "name" : "Host Lifestage ID",
+        "titles" : "Host Lifestage ID",
+        "datatype" : "string"
+      }, {
+        "name" : "Host Material Name",
+        "titles" : "Host Material Name",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceOccurrenceId",
+        "titles" : "Host Material ID",
         "datatype" : "string"
       }, {
         "name" : "Misc Host Attributes",
         "titles" : "Misc Host Attributes",
         "datatype" : "string"
-      } ] 
+      }, {
+        "name" : "",
+        "titles" : "",
+        "datatype" : "string"
+      }, {
+        "name" : "",
+        "titles" : "",
+        "datatype" : "string"
+      } ]
     }
   } ]
 }
